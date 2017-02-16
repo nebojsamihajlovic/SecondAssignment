@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		367B14391E559E360068C6CC /* GameViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 367B14381E559E360068C6CC /* GameViewController.swift */; };
 		CEB70F651E4E913D00521547 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = CEB70F641E4E913D00521547 /* AppDelegate.swift */; };
 		CEB70F6A1E4E913E00521547 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = CEB70F681E4E913E00521547 /* Main.storyboard */; };
 		CEB70F6C1E4E913E00521547 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = CEB70F6B1E4E913E00521547 /* Assets.xcassets */; };
@@ -14,6 +15,7 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		367B14381E559E360068C6CC /* GameViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = GameViewController.swift; sourceTree = "<group>"; };
 		CEB70F611E4E913D00521547 /* GuessGame.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = GuessGame.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		CEB70F641E4E913D00521547 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		CEB70F691E4E913E00521547 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
@@ -54,6 +56,7 @@
 			children = (
 				CEB70F641E4E913D00521547 /* AppDelegate.swift */,
 				CEB70F681E4E913E00521547 /* Main.storyboard */,
+				367B14381E559E360068C6CC /* GameViewController.swift */,
 				CEB70F6B1E4E913E00521547 /* Assets.xcassets */,
 				CEB70F6D1E4E913E00521547 /* LaunchScreen.storyboard */,
 				CEB70F701E4E913E00521547 /* Info.plist */,
@@ -134,6 +137,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				367B14391E559E360068C6CC /* GameViewController.swift in Sources */,
 				CEB70F651E4E913D00521547 /* AppDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
