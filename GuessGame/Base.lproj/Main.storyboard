@@ -32,9 +32,30 @@
                             </view>
                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="jra-Up-HXP" userLabel="LettersView">
                                 <rect key="frame" x="0.0" y="420.66666666666663" width="414" height="261.66666666666663"/>
+                                <subviews>
+                                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="bIP-Fo-5ff" userLabel="PlayerLettersView">
+                                        <rect key="frame" x="8" y="8" width="398" height="76.666666666666629"/>
+                                        <color key="backgroundColor" red="0.68619841337203979" green="0.68631839752197266" blue="0.6861909031867981" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                    </view>
+                                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="aJa-SD-TzX" userLabel="ProposedLettersView">
+                                        <rect key="frame" x="8" y="92.666666666666686" width="398" height="153.33333333333326"/>
+                                        <color key="backgroundColor" white="0.66666666666666663" alpha="1" colorSpace="calibratedWhite"/>
+                                    </view>
+                                </subviews>
                                 <color key="backgroundColor" red="0.78312182426452637" green="0.80986684560775757" blue="0.91776806116104126" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <constraints>
+                                    <constraint firstItem="bIP-Fo-5ff" firstAttribute="top" secondItem="jra-Up-HXP" secondAttribute="top" constant="8" id="6od-Ak-RsD"/>
+                                    <constraint firstItem="aJa-SD-TzX" firstAttribute="top" secondItem="bIP-Fo-5ff" secondAttribute="bottom" constant="8" id="8iQ-9b-zfq"/>
+                                    <constraint firstItem="bIP-Fo-5ff" firstAttribute="leading" secondItem="jra-Up-HXP" secondAttribute="leading" constant="8" id="JqS-Nu-8OZ"/>
+                                    <constraint firstItem="bIP-Fo-5ff" firstAttribute="width" secondItem="jra-Up-HXP" secondAttribute="width" constant="-16" id="P6l-WT-gCW"/>
+                                    <constraint firstAttribute="bottom" secondItem="aJa-SD-TzX" secondAttribute="bottom" constant="16" id="kJx-xg-PwR"/>
+                                    <constraint firstItem="aJa-SD-TzX" firstAttribute="leading" secondItem="jra-Up-HXP" secondAttribute="leading" constant="8" id="ktE-ZU-Lrl"/>
+                                    <constraint firstItem="aJa-SD-TzX" firstAttribute="height" secondItem="bIP-Fo-5ff" secondAttribute="height" multiplier="2" id="lgb-hh-Agl"/>
+                                    <constraint firstAttribute="trailing" secondItem="aJa-SD-TzX" secondAttribute="trailing" constant="8" id="mAi-M1-LZA"/>
+                                    <constraint firstItem="aJa-SD-TzX" firstAttribute="width" secondItem="bIP-Fo-5ff" secondAttribute="width" id="pwB-6R-VDe"/>
+                                </constraints>
                             </view>
-                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="fEM-qm-cq7" userLabel="AnimalView">
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="fEM-qm-cq7" userLabel="AnimalView" customClass="UIImageView">
                                 <rect key="frame" x="0.0" y="93.666666666666686" width="414" height="327"/>
                                 <color key="backgroundColor" red="0.79291433095932007" green="0.92972195148468018" blue="0.67597705125808716" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                             </view>
