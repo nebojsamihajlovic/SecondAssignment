@@ -33,7 +33,18 @@
                             </view>
                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="fEM-qm-cq7" userLabel="AnimalView" customClass="UIImageView">
                                 <rect key="frame" x="0.0" y="93.666666666666686" width="414" height="327"/>
+                                <subviews>
+                                    <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="HORSE" translatesAutoresizingMaskIntoConstraints="NO" id="a8Z-a5-vFt">
+                                        <rect key="frame" x="102.66666666666669" y="8" width="209" height="311"/>
+                                    </imageView>
+                                </subviews>
                                 <color key="backgroundColor" red="0.79291433095932007" green="0.92972195148468018" blue="0.67597705125808716" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <constraints>
+                                    <constraint firstItem="a8Z-a5-vFt" firstAttribute="width" relation="lessThanOrEqual" secondItem="fEM-qm-cq7" secondAttribute="width" constant="16" id="5KE-UG-uA8"/>
+                                    <constraint firstAttribute="bottom" secondItem="a8Z-a5-vFt" secondAttribute="bottom" constant="8" id="5lI-lL-TSl"/>
+                                    <constraint firstItem="a8Z-a5-vFt" firstAttribute="centerX" secondItem="fEM-qm-cq7" secondAttribute="centerX" id="bfq-wK-lvr"/>
+                                    <constraint firstItem="a8Z-a5-vFt" firstAttribute="top" secondItem="fEM-qm-cq7" secondAttribute="top" constant="8" id="ryE-96-4qv"/>
+                                </constraints>
                             </view>
                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="jra-Up-HXP" userLabel="LettersView">
                                 <rect key="frame" x="0.0" y="420.66666666666663" width="414" height="261.66666666666663"/>
@@ -308,4 +319,7 @@
             <point key="canvasLocation" x="-328" y="-33"/>
         </scene>
     </scenes>
+    <resources>
+        <image name="HORSE" width="209" height="168"/>
+    </resources>
 </document>
