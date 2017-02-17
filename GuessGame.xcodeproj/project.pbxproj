@@ -8,6 +8,11 @@
 
 /* Begin PBXBuildFile section */
 		367B14391E559E360068C6CC /* GameViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 367B14381E559E360068C6CC /* GameViewController.swift */; };
+		367B14591E5622EC0068C6CC /* Animals.swift in Sources */ = {isa = PBXBuildFile; fileRef = 367B14581E5622EC0068C6CC /* Animals.swift */; };
+		367B145B1E5640170068C6CC /* ShuffleCollection.swift in Sources */ = {isa = PBXBuildFile; fileRef = 367B145A1E5640170068C6CC /* ShuffleCollection.swift */; };
+		367B145D1E5641050068C6CC /* IntExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 367B145C1E5641050068C6CC /* IntExtension.swift */; };
+		367B14601E5649820068C6CC /* RandomStringExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 367B145F1E5649820068C6CC /* RandomStringExtension.swift */; };
+		367B14621E56E42E0068C6CC /* Game.swift in Sources */ = {isa = PBXBuildFile; fileRef = 367B14611E56E42E0068C6CC /* Game.swift */; };
 		CEB70F651E4E913D00521547 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = CEB70F641E4E913D00521547 /* AppDelegate.swift */; };
 		CEB70F6A1E4E913E00521547 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = CEB70F681E4E913E00521547 /* Main.storyboard */; };
 		CEB70F6C1E4E913E00521547 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = CEB70F6B1E4E913E00521547 /* Assets.xcassets */; };
@@ -16,6 +21,11 @@
 
 /* Begin PBXFileReference section */
 		367B14381E559E360068C6CC /* GameViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = GameViewController.swift; sourceTree = "<group>"; };
+		367B14581E5622EC0068C6CC /* Animals.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Animals.swift; sourceTree = "<group>"; };
+		367B145A1E5640170068C6CC /* ShuffleCollection.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ShuffleCollection.swift; sourceTree = "<group>"; };
+		367B145C1E5641050068C6CC /* IntExtension.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = IntExtension.swift; sourceTree = "<group>"; };
+		367B145F1E5649820068C6CC /* RandomStringExtension.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RandomStringExtension.swift; sourceTree = "<group>"; };
+		367B14611E56E42E0068C6CC /* Game.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Game.swift; sourceTree = "<group>"; };
 		CEB70F611E4E913D00521547 /* GuessGame.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = GuessGame.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		CEB70F641E4E913D00521547 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		CEB70F691E4E913E00521547 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
@@ -35,6 +45,16 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		367B145E1E5641390068C6CC /* Extensions */ = {
+			isa = PBXGroup;
+			children = (
+				367B145A1E5640170068C6CC /* ShuffleCollection.swift */,
+				367B145C1E5641050068C6CC /* IntExtension.swift */,
+				367B145F1E5649820068C6CC /* RandomStringExtension.swift */,
+			);
+			name = Extensions;
+			sourceTree = "<group>";
+		};
 		CEB70F581E4E913D00521547 = {
 			isa = PBXGroup;
 			children = (
@@ -56,10 +76,13 @@
 			children = (
 				CEB70F641E4E913D00521547 /* AppDelegate.swift */,
 				CEB70F681E4E913E00521547 /* Main.storyboard */,
+				367B14611E56E42E0068C6CC /* Game.swift */,
 				367B14381E559E360068C6CC /* GameViewController.swift */,
 				CEB70F6B1E4E913E00521547 /* Assets.xcassets */,
 				CEB70F6D1E4E913E00521547 /* LaunchScreen.storyboard */,
 				CEB70F701E4E913E00521547 /* Info.plist */,
+				367B14581E5622EC0068C6CC /* Animals.swift */,
+				367B145E1E5641390068C6CC /* Extensions */,
 			);
 			path = GuessGame;
 			sourceTree = "<group>";
@@ -96,7 +119,6 @@
 				TargetAttributes = {
 					CEB70F601E4E913D00521547 = {
 						CreatedOnToolsVersion = 8.2.1;
-						DevelopmentTeam = FCBF75QZTX;
 						ProvisioningStyle = Automatic;
 					};
 				};
@@ -138,7 +160,12 @@
 			buildActionMask = 2147483647;
 			files = (
 				367B14391E559E360068C6CC /* GameViewController.swift in Sources */,
+				367B14591E5622EC0068C6CC /* Animals.swift in Sources */,
+				367B14621E56E42E0068C6CC /* Game.swift in Sources */,
 				CEB70F651E4E913D00521547 /* AppDelegate.swift in Sources */,
+				367B145D1E5641050068C6CC /* IntExtension.swift in Sources */,
+				367B145B1E5640170068C6CC /* ShuffleCollection.swift in Sources */,
+				367B14601E5649820068C6CC /* RandomStringExtension.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -261,7 +288,7 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
-				DEVELOPMENT_TEAM = FCBF75QZTX;
+				DEVELOPMENT_TEAM = "";
 				INFOPLIST_FILE = GuessGame/Info.plist;
 				IPHONEOS_DEPLOYMENT_TARGET = 10.1;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
@@ -275,7 +302,7 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
-				DEVELOPMENT_TEAM = FCBF75QZTX;
+				DEVELOPMENT_TEAM = "";
 				INFOPLIST_FILE = GuessGame/Info.plist;
 				IPHONEOS_DEPLOYMENT_TARGET = 10.1;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
