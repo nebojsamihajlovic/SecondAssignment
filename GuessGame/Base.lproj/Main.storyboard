@@ -26,8 +26,8 @@
                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="7uv-Aw-fny" userLabel="NewGameView">
                                 <rect key="frame" x="0.0" y="20" width="414" height="65.666666666666671"/>
                                 <subviews>
-                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Sc2-tV-zTg" userLabel="NewGameButton">
-                                        <rect key="frame" x="142" y="12.333333333333332" width="131" height="41"/>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Sc2-tV-zTg" userLabel="NewGameButton">
+                                        <rect key="frame" x="142" y="12.666666666666668" width="131" height="41"/>
                                         <color key="backgroundColor" red="0.063133381307125092" green="0.53424340486526489" blue="0.85816389322280884" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                         <fontDescription key="fontDescription" type="boldSystem" pointSize="24"/>
                                         <state key="normal" title="NEW GAME">
@@ -400,6 +400,7 @@
                     </view>
                     <connections>
                         <outlet property="animalView" destination="fEM-qm-cq7" id="xqn-WU-YA7"/>
+                        <outlet property="buttonNewGame" destination="Sc2-tV-zTg" id="XcK-BY-ef0"/>
                         <outlet property="imageView" destination="a8Z-a5-vFt" id="B1U-ww-6a2"/>
                         <outlet property="viewPlayerLetters" destination="bIP-Fo-5ff" id="oyg-Dd-jNx"/>
                         <outlet property="viewProposedLetters" destination="aJa-SD-TzX" id="55E-Ho-62C"/>
