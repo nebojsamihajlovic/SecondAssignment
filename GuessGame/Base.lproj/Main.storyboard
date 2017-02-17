@@ -400,12 +400,6 @@
                     </view>
                     <connections>
                         <outlet property="animalView" destination="fEM-qm-cq7" id="xqn-WU-YA7"/>
-                        <outlet property="btnSolutionLetter1" destination="Pmt-Be-zLB" id="mSD-yZ-Rya"/>
-                        <outlet property="btnSolutionLetter2" destination="Pmt-Be-zLB" id="UU4-Bo-TLR"/>
-                        <outlet property="btnSolutionLetter3" destination="HPb-7u-tge" id="SVZ-En-bj8"/>
-                        <outlet property="btnSolutionLetter4" destination="mpR-GM-sNN" id="bTt-MP-ilr"/>
-                        <outlet property="btnSolutionLetter5" destination="aKd-B1-Mvu" id="ifM-O1-XoA"/>
-                        <outlet property="btnSolutionLetter6" destination="ygA-4C-0Wc" id="JHU-cc-4K6"/>
                         <outlet property="imageView" destination="a8Z-a5-vFt" id="B1U-ww-6a2"/>
                         <outlet property="viewPlayerLetters" destination="bIP-Fo-5ff" id="oyg-Dd-jNx"/>
                         <outlet property="viewProposedLetters" destination="aJa-SD-TzX" id="55E-Ho-62C"/>

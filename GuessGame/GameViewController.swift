@@ -10,18 +10,27 @@ import UIKit
 
 class GameViewController: UIViewController {
 
+    // always has a value (at least default)
+    var randomAnimal: Animals!
+    var game = Game()
+
     @IBOutlet weak var imageView: UIImageView!
     @IBOutlet weak var animalView: UIImageView!
-
-    @IBOutlet weak var btnSolutionLetter1: UIButton!
-    @IBOutlet weak var btnSolutionLetter2: UIButton!
-    @IBOutlet weak var btnSolutionLetter3: UIButton!
-    @IBOutlet weak var btnSolutionLetter4: UIButton!
-    @IBOutlet weak var btnSolutionLetter5: UIButton!
-    @IBOutlet weak var btnSolutionLetter6: UIButton!
     
     @IBOutlet weak var viewProposedLetters: UIView!
     @IBOutlet weak var viewPlayerLetters: UIView!
+    
+    override func viewDidLoad() {
+        super.viewDidLoad()
+        
+        // Do any additional setup after loading the view.
+        disableAllProposedLettersButtons()
+    }
+    
+    override func didReceiveMemoryWarning() {
+        super.didReceiveMemoryWarning()
+        // Dispose of any resources that can be recreated.
+    }
     
     @IBAction func onProposedLetterButtonsClicked(_ sender: UIButton) {
         
@@ -129,10 +138,6 @@ class GameViewController: UIViewController {
         animalView.addConstraints([centerX, centerY, leading, trailing])
     }
     
-    // always has a value (at least default)
-    var randomAnimal: Animals!
-    var game = Game()
-    
     func getRandomAnimalAndSetupImageView()
     {
         randomAnimal = Animals.random()
@@ -209,17 +214,5 @@ class GameViewController: UIViewController {
         {
             (btn as! UIButton).isEnabled = false
         }
-    }
-    
-    override func viewDidLoad() {
-        super.viewDidLoad()
-
-        // Do any additional setup after loading the view.
-        disableAllProposedLettersButtons()
-    }
-
-    override func didReceiveMemoryWarning() {
-        super.didReceiveMemoryWarning()
-        // Dispose of any resources that can be recreated.
     }
 }
