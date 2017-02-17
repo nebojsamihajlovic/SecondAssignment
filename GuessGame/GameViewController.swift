@@ -37,6 +37,8 @@ class GameViewController: UIViewController {
         
         print("Clicked on proposed letter button")
         
+        let alertsInseadOfViewsOnEndGame = true
+        
         if let text = sender.titleLabel?.text {
             print("Letter chosen: \(text)")
             
@@ -49,7 +51,7 @@ class GameViewController: UIViewController {
                 if game.gameOver == true
                 {
                     print("Game Over - FAILED")
-                    showEndGameView(success: false)
+                    showEndGameView(success: false, alerts: alertsInseadOfViewsOnEndGame)
                 }
             }
             else
@@ -66,7 +68,7 @@ class GameViewController: UIViewController {
                 if game.gameOver == true
                 {
                     print("Game Over - SUCESS")
-                    showEndGameView(success: true)
+                    showEndGameView(success: true, alerts: alertsInseadOfViewsOnEndGame)
                 }
             }
         }
@@ -75,18 +77,102 @@ class GameViewController: UIViewController {
         sender.backgroundColor = UIColor.gray
     }
     
-    func showEndGameView(success: Bool)
+    func showEndGameView(success: Bool, alerts: Bool)
     {
         // first disable all buttons
         disableAllProposedLettersButtons()
         
+        
+        if alerts == false
+        {
+            createEndView(success: success)
+        }
+        else
+        {
+            createLevelClearAlert(success: success)
+        }
+    }
+    
+    func createLevelClearAlert(success: Bool)
+    {
+        if success == true
+        {
+            let alert = UIAlertController(title: "Level Clear", message: "Do you want to replay level or to start new game?", preferredStyle: .alert)
+            
+            for i in ["Replay level", "Start new game"]
+            {
+                alert.addAction(UIAlertAction(title: i, style: .default, handler: replayOrStartNewLevel))
+            }
+            
+            self.present(alert, animated: true, completion: nil)
+        }
+        else
+        {
+            let alert = UIAlertController(title: "Game Over", message: "Do you want start level from beggining?", preferredStyle: .alert)
+            
+            for i in ["Yes", "No"]
+            {
+                alert.addAction(UIAlertAction(title: i, style: .default, handler: startLevelFromBeginnig))
+            }
+            
+            self.present(alert, animated: true, completion: nil)
+        }
+    }
+    
+    func replayOrStartNewLevel(action: UIAlertAction) {
+        
+        let userAction = action.title ?? "Start new game"
+        
+        if userAction == "Replay level"
+        {
+            print("Replay level ...")
+            restartLevel()
+        }
+        else
+        {
+            print("Starting new game ...")
+            startNewGame()
+        }
+    }
+    
+    func startLevelFromBeginnig(action: UIAlertAction) {
+        
+        let userAction = action.title ?? "No"
+        
+        if userAction == "Yes"
+        {
+            print("Replay level ...")
+            restartLevel()
+        }
+        else
+        {
+            print("Starting new game ...")
+            startNewGame()
+        }
+    }
+    
+    func restartLevel()
+    {
+        clearPlayerLetterViewButtons()
+        game.initialize(animal: randomAnimal.animal.rawValue)
+        
+        // begin new game
+        for btn in viewProposedLetters.subviews
+        {
+            (btn as! UIButton).isEnabled = true
+            (btn as! UIButton).backgroundColor = UIColor.blue
+        }
+    }
+    
+    func createEndView(success: Bool)
+    {
         let viewEndGame = UILabel(frame: CGRect(x: 0, y: 0, width: 200, height: 60))
         
         viewEndGame.textAlignment = .center
         viewEndGame.font = UIFont.boldSystemFont(ofSize: 36.0)
         viewEndGame.translatesAutoresizingMaskIntoConstraints = false
         viewEndGame.tag = 999 // set tag value so we can remove it from superview
-
+        
         if success == true
         {
             viewEndGame.backgroundColor = .green
@@ -196,15 +282,7 @@ class GameViewController: UIViewController {
         if userAction == "Yes"
         {
             print("Restarting level ...")
-            clearPlayerLetterViewButtons()
-            game.initialize(animal: randomAnimal.animal.rawValue)
-            
-            // begin new game
-            for btn in viewProposedLetters.subviews
-            {
-                (btn as! UIButton).isEnabled = true
-                (btn as! UIButton).backgroundColor = UIColor.blue
-            }
+            restartLevel()
         }
     }
     
@@ -224,6 +302,11 @@ class GameViewController: UIViewController {
             return
         }
         
+        startNewGame()
+    }
+    
+    func startNewGame()
+    {
         // begin new game
         for btn in viewProposedLetters.subviews
         {
