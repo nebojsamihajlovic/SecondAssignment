@@ -48,7 +48,7 @@
                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="fEM-qm-cq7" userLabel="AnimalView" customClass="UIImageView">
                                 <rect key="frame" x="0.0" y="85.666666666666657" width="414" height="325.33333333333337"/>
                                 <subviews>
-                                    <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="ZEBRA" translatesAutoresizingMaskIntoConstraints="NO" id="a8Z-a5-vFt">
+                                    <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" ambiguous="YES" misplaced="YES" translatesAutoresizingMaskIntoConstraints="NO" id="a8Z-a5-vFt">
                                         <rect key="frame" x="8.3333333333333428" y="8" width="398" height="309.33333333333331"/>
                                         <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
                                     </imageView>
@@ -73,47 +73,53 @@
                                                 <constraints>
                                                     <constraint firstAttribute="width" secondItem="uZd-dE-DrJ" secondAttribute="height" multiplier="1:1" priority="990" id="g0Y-Dh-Aco"/>
                                                 </constraints>
+                                                <fontDescription key="fontDescription" type="system" weight="heavy" pointSize="24"/>
                                                 <state key="normal">
-                                                    <color key="titleColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                                    <color key="titleColor" white="0.0" alpha="1" colorSpace="calibratedWhite"/>
                                                 </state>
                                             </button>
                                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Pmt-Be-zLB" userLabel="secondLetterButton">
                                                 <rect key="frame" x="78.333333333333343" y="8" width="54.333333333333343" height="60.333333333333314"/>
                                                 <color key="backgroundColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                                <fontDescription key="fontDescription" type="system" weight="heavy" pointSize="24"/>
                                                 <state key="normal">
-                                                    <color key="titleColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                                    <color key="titleColor" white="0.0" alpha="1" colorSpace="calibratedWhite"/>
                                                 </state>
                                             </button>
                                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="HPb-7u-tge" userLabel="thirdLetterButton">
                                                 <rect key="frame" x="140.66666666666663" y="8" width="54.333333333333343" height="60.333333333333314"/>
                                                 <color key="backgroundColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                                <fontDescription key="fontDescription" type="system" weight="heavy" pointSize="24"/>
                                                 <state key="normal">
-                                                    <color key="titleColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                                    <color key="titleColor" white="0.0" alpha="1" colorSpace="calibratedWhite"/>
                                                 </state>
                                             </button>
                                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="mpR-GM-sNN" userLabel="fourthLetterButton">
                                                 <rect key="frame" x="203" y="8" width="54.333333333333314" height="60.333333333333314"/>
                                                 <color key="backgroundColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                                <fontDescription key="fontDescription" type="system" weight="heavy" pointSize="24"/>
                                                 <state key="normal">
-                                                    <color key="titleColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                                    <color key="titleColor" white="0.0" alpha="1" colorSpace="calibratedWhite"/>
                                                 </state>
                                             </button>
                                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="aKd-B1-Mvu" userLabel="fifthLetterButton">
                                                 <rect key="frame" x="265.33333333333331" y="8" width="54.333333333333371" height="60.333333333333314"/>
                                                 <color key="backgroundColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                                <fontDescription key="fontDescription" type="system" weight="heavy" pointSize="24"/>
                                                 <state key="normal">
-                                                    <color key="titleColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                                    <color key="titleColor" white="0.0" alpha="1" colorSpace="calibratedWhite"/>
                                                 </state>
                                             </button>
                                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="ygA-4C-0Wc" userLabel="sixthLetterButton">
                                                 <rect key="frame" x="327.66666666666674" y="8" width="54.333333333333314" height="60.333333333333314"/>
                                                 <color key="backgroundColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                                <fontDescription key="fontDescription" type="system" weight="heavy" pointSize="24"/>
                                                 <state key="normal">
-                                                    <color key="titleColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                                    <color key="titleColor" white="0.0" alpha="1" colorSpace="calibratedWhite"/>
                                                 </state>
                                             </button>
                                         </subviews>
-                                        <color key="backgroundColor" red="0.68619841337203979" green="0.68631839752197266" blue="0.6861909031867981" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                        <color key="backgroundColor" white="0.66666666666666663" alpha="1" colorSpace="calibratedWhite"/>
                                         <constraints>
                                             <constraint firstAttribute="bottom" secondItem="uZd-dE-DrJ" secondAttribute="bottom" constant="8" id="6sk-Gg-KXH"/>
                                             <constraint firstItem="aKd-B1-Mvu" firstAttribute="leading" secondItem="mpR-GM-sNN" secondAttribute="trailing" constant="8" id="9hw-Fl-dzx"/>
@@ -155,86 +161,134 @@
                                                 <constraints>
                                                     <constraint firstAttribute="width" secondItem="oL2-xU-xpa" secondAttribute="height" multiplier="1:1" priority="990" id="uoQ-Gi-A74"/>
                                                 </constraints>
+                                                <fontDescription key="fontDescription" type="boldSystem" pointSize="24"/>
                                                 <state key="normal">
                                                     <color key="titleColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                                 </state>
+                                                <connections>
+                                                    <action selector="onProposedLetterButtonsClicked:" destination="O9h-2o-g6x" eventType="touchUpInside" id="RrO-Di-KJC"/>
+                                                </connections>
                                             </button>
                                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="dnW-9P-Jao" userLabel="btnProposedLetter2">
                                                 <rect key="frame" x="67.666666666666657" y="0.0" width="59.666666666666671" height="72.333333333333314"/>
                                                 <color key="backgroundColor" red="0.01512023341" green="0.19928276540000001" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                                <fontDescription key="fontDescription" type="boldSystem" pointSize="24"/>
                                                 <state key="normal">
                                                     <color key="titleColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                                 </state>
+                                                <connections>
+                                                    <action selector="onProposedLetterButtonsClicked:" destination="O9h-2o-g6x" eventType="touchUpInside" id="AdI-Gl-AT9"/>
+                                                </connections>
                                             </button>
                                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="x3g-Xw-w74" userLabel="btnProposedLetter3">
                                                 <rect key="frame" x="135.33333333333337" y="0.0" width="59.666666666666657" height="72.333333333333314"/>
                                                 <color key="backgroundColor" red="0.01512023341" green="0.19928276540000001" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                                <fontDescription key="fontDescription" type="boldSystem" pointSize="24"/>
                                                 <state key="normal">
                                                     <color key="titleColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                                 </state>
+                                                <connections>
+                                                    <action selector="onProposedLetterButtonsClicked:" destination="O9h-2o-g6x" eventType="touchUpInside" id="aUR-7f-Jnm"/>
+                                                </connections>
                                             </button>
                                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="lB3-zH-WOA" userLabel="btnProposedLetter4">
                                                 <rect key="frame" x="203" y="0.0" width="59.666666666666686" height="72.333333333333314"/>
                                                 <color key="backgroundColor" red="0.01512023341" green="0.19928276540000001" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                                <fontDescription key="fontDescription" type="boldSystem" pointSize="24"/>
                                                 <state key="normal">
                                                     <color key="titleColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                                 </state>
+                                                <connections>
+                                                    <action selector="onProposedLetterButtonsClicked:" destination="O9h-2o-g6x" eventType="touchUpInside" id="yy9-1p-tUd"/>
+                                                </connections>
                                             </button>
                                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="P64-m4-SfR" userLabel="btnProposedLetter5">
                                                 <rect key="frame" x="270.66666666666669" y="0.0" width="59.666666666666629" height="72.333333333333314"/>
                                                 <color key="backgroundColor" red="0.01512023341" green="0.19928276540000001" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                                <fontDescription key="fontDescription" type="boldSystem" pointSize="24"/>
                                                 <state key="normal">
                                                     <color key="titleColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                                 </state>
+                                                <connections>
+                                                    <action selector="onProposedLetterButtonsClicked:" destination="O9h-2o-g6x" eventType="touchUpInside" id="jOd-44-Q1R"/>
+                                                </connections>
                                             </button>
                                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="OJ1-aR-5dm" userLabel="btnProposedLetter6">
                                                 <rect key="frame" x="338.33333333333326" y="0.0" width="59.666666666666686" height="72.333333333333314"/>
                                                 <color key="backgroundColor" red="0.01512023341" green="0.19928276540000001" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                                <fontDescription key="fontDescription" type="boldSystem" pointSize="24"/>
                                                 <state key="normal">
                                                     <color key="titleColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                                 </state>
+                                                <connections>
+                                                    <action selector="onProposedLetterButtonsClicked:" destination="O9h-2o-g6x" eventType="touchUpInside" id="PuD-Sk-Czk"/>
+                                                </connections>
                                             </button>
                                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="ecB-1p-o6D" userLabel="btnProposedLetter7">
                                                 <rect key="frame" x="0.0" y="80.333333333333314" width="59.666666666666671" height="71.333333333333371"/>
                                                 <color key="backgroundColor" red="0.01512023341" green="0.19928276540000001" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                                <fontDescription key="fontDescription" type="boldSystem" pointSize="24"/>
                                                 <state key="normal">
                                                     <color key="titleColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                                 </state>
+                                                <connections>
+                                                    <action selector="onProposedLetterButtonsClicked:" destination="O9h-2o-g6x" eventType="touchUpInside" id="Sj3-fm-7VN"/>
+                                                </connections>
                                             </button>
                                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Gtd-cT-rNh" userLabel="btnProposedLetter8">
                                                 <rect key="frame" x="67.666666666666657" y="80.333333333333314" width="59.666666666666671" height="71.333333333333371"/>
                                                 <color key="backgroundColor" red="0.01512023341" green="0.19928276540000001" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                                <fontDescription key="fontDescription" type="boldSystem" pointSize="24"/>
                                                 <state key="normal">
                                                     <color key="titleColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                                 </state>
+                                                <connections>
+                                                    <action selector="onProposedLetterButtonsClicked:" destination="O9h-2o-g6x" eventType="touchUpInside" id="9c9-09-Nw4"/>
+                                                </connections>
                                             </button>
                                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="ad9-lV-ieY" userLabel="btnProposedLetter9">
                                                 <rect key="frame" x="135.33333333333337" y="80.333333333333314" width="59.666666666666657" height="71.333333333333371"/>
                                                 <color key="backgroundColor" red="0.01512023341" green="0.19928276540000001" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                                <fontDescription key="fontDescription" type="boldSystem" pointSize="24"/>
                                                 <state key="normal">
                                                     <color key="titleColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                                 </state>
+                                                <connections>
+                                                    <action selector="onProposedLetterButtonsClicked:" destination="O9h-2o-g6x" eventType="touchUpInside" id="PLJ-M8-g80"/>
+                                                </connections>
                                             </button>
                                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="aRq-4o-tuD" userLabel="btnProposedLetter10">
                                                 <rect key="frame" x="203" y="80.333333333333314" width="59.666666666666686" height="71.333333333333371"/>
                                                 <color key="backgroundColor" red="0.01512023341" green="0.19928276540000001" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                                <fontDescription key="fontDescription" type="boldSystem" pointSize="24"/>
                                                 <state key="normal">
                                                     <color key="titleColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                                 </state>
+                                                <connections>
+                                                    <action selector="onProposedLetterButtonsClicked:" destination="O9h-2o-g6x" eventType="touchUpInside" id="ROr-A8-ojk"/>
+                                                </connections>
                                             </button>
                                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="YIn-dE-JUy" userLabel="btnProposedLetter11">
                                                 <rect key="frame" x="270.66666666666669" y="80.333333333333314" width="59.666666666666629" height="71.333333333333371"/>
                                                 <color key="backgroundColor" red="0.01512023341" green="0.19928276540000001" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                                <fontDescription key="fontDescription" type="boldSystem" pointSize="24"/>
                                                 <state key="normal">
                                                     <color key="titleColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                                 </state>
+                                                <connections>
+                                                    <action selector="onProposedLetterButtonsClicked:" destination="O9h-2o-g6x" eventType="touchUpInside" id="2cu-Q2-rb5"/>
+                                                </connections>
                                             </button>
                                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="zP3-ZF-mhE" userLabel="btnProposedLetter12">
                                                 <rect key="frame" x="338.33333333333326" y="80.333333333333314" width="59.666666666666686" height="71.333333333333371"/>
                                                 <color key="backgroundColor" red="0.01512023341" green="0.19928276540000001" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                                <fontDescription key="fontDescription" type="boldSystem" pointSize="24"/>
                                                 <state key="normal">
                                                     <color key="titleColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                                 </state>
+                                                <connections>
+                                                    <action selector="onProposedLetterButtonsClicked:" destination="O9h-2o-g6x" eventType="touchUpInside" id="X1n-bB-13c"/>
+                                                </connections>
                                             </button>
                                         </subviews>
                                         <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
@@ -345,6 +399,7 @@
                         </constraints>
                     </view>
                     <connections>
+                        <outlet property="animalView" destination="fEM-qm-cq7" id="xqn-WU-YA7"/>
                         <outlet property="btnSolutionLetter1" destination="Pmt-Be-zLB" id="mSD-yZ-Rya"/>
                         <outlet property="btnSolutionLetter2" destination="Pmt-Be-zLB" id="UU4-Bo-TLR"/>
                         <outlet property="btnSolutionLetter3" destination="HPb-7u-tge" id="SVZ-En-bj8"/>
@@ -352,6 +407,7 @@
                         <outlet property="btnSolutionLetter5" destination="aKd-B1-Mvu" id="ifM-O1-XoA"/>
                         <outlet property="btnSolutionLetter6" destination="ygA-4C-0Wc" id="JHU-cc-4K6"/>
                         <outlet property="imageView" destination="a8Z-a5-vFt" id="B1U-ww-6a2"/>
+                        <outlet property="viewPlayerLetters" destination="bIP-Fo-5ff" id="oyg-Dd-jNx"/>
                         <outlet property="viewProposedLetters" destination="aJa-SD-TzX" id="55E-Ho-62C"/>
                     </connections>
                 </viewController>
@@ -360,7 +416,4 @@
             <point key="canvasLocation" x="1120" y="-654"/>
         </scene>
     </scenes>
-    <resources>
-        <image name="ZEBRA" width="450" height="300"/>
-    </resources>
 </document>
