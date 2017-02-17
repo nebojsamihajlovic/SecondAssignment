@@ -16,6 +16,7 @@ class GameViewController: UIViewController {
 
     @IBOutlet weak var imageView: UIImageView!
     @IBOutlet weak var animalView: UIImageView!
+    @IBOutlet weak var buttonNewGame: UIButton!
     
     @IBOutlet weak var viewProposedLetters: UIView!
     @IBOutlet weak var viewPlayerLetters: UIView!
@@ -136,6 +137,8 @@ class GameViewController: UIViewController {
             constant: -16)
         
         animalView.addConstraints([centerX, centerY, leading, trailing])
+        
+        buttonNewGame.setTitle("NEW GAME", for: .normal)
     }
     
     func getRandomAnimalAndSetupImageView()
@@ -186,7 +189,41 @@ class GameViewController: UIViewController {
         }
     }
     
+    func restartLevel(action: UIAlertAction) {
+        
+        let userAction = action.title ?? "No"
+        
+        if userAction == "Yes"
+        {
+            print("Restarting level ...")
+            clearPlayerLetterViewButtons()
+            game.initialize(animal: randomAnimal.animal.rawValue)
+            
+            // begin new game
+            for btn in viewProposedLetters.subviews
+            {
+                (btn as! UIButton).isEnabled = true
+                (btn as! UIButton).backgroundColor = UIColor.blue
+            }
+        }
+    }
+    
     @IBAction func btnNewGameClicked(_ sender: UIButton) {
+        
+        if sender.title(for: .normal) == "RESTART LEVEL"
+        {
+            let alert = UIAlertController(title: "Restart Level", message: "Do you really want to restart level?", preferredStyle: .alert)
+
+            for i in ["Yes", "No"]
+            {
+                alert.addAction(UIAlertAction(title: i, style: .default, handler: restartLevel))
+            }
+        
+            self.present(alert, animated: true, completion: nil)
+            
+            return
+        }
+        
         // begin new game
         for btn in viewProposedLetters.subviews
         {
@@ -198,6 +235,13 @@ class GameViewController: UIViewController {
         getRandomAnimalAndSetupImageView()
         clearPlayerLetterViewButtons()
         
+        removeEndGameMessageFromSuperView()
+        
+        buttonNewGame.setTitle("RESTART LEVEL", for: .normal)
+    }
+    
+    func removeEndGameMessageFromSuperView()
+    {
         let subViews = self.animalView.subviews
         for subview in subViews
         {
