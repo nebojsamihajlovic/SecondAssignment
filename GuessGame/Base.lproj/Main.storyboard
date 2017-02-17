@@ -48,14 +48,14 @@
                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="fEM-qm-cq7" userLabel="AnimalView" customClass="UIImageView">
                                 <rect key="frame" x="0.0" y="85.666666666666657" width="414" height="325.33333333333337"/>
                                 <subviews>
-                                    <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" ambiguous="YES" misplaced="YES" translatesAutoresizingMaskIntoConstraints="NO" id="a8Z-a5-vFt">
+                                    <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="a8Z-a5-vFt">
                                         <rect key="frame" x="8.3333333333333428" y="8" width="398" height="309.33333333333331"/>
                                         <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
                                     </imageView>
                                 </subviews>
                                 <color key="backgroundColor" red="0.79291433095932007" green="0.92972195148468018" blue="0.67597705125808716" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 <constraints>
-                                    <constraint firstAttribute="width" relation="greaterThanOrEqual" secondItem="a8Z-a5-vFt" secondAttribute="width" constant="16" id="5KE-UG-uA8"/>
+                                    <constraint firstItem="a8Z-a5-vFt" firstAttribute="width" secondItem="fEM-qm-cq7" secondAttribute="width" constant="-16" id="5KE-UG-uA8"/>
                                     <constraint firstAttribute="bottom" secondItem="a8Z-a5-vFt" secondAttribute="bottom" constant="8" id="5lI-lL-TSl"/>
                                     <constraint firstItem="a8Z-a5-vFt" firstAttribute="centerX" secondItem="fEM-qm-cq7" secondAttribute="centerX" id="bfq-wK-lvr"/>
                                     <constraint firstItem="a8Z-a5-vFt" firstAttribute="top" secondItem="fEM-qm-cq7" secondAttribute="top" constant="8" id="ryE-96-4qv"/>
