@@ -17,6 +17,10 @@ struct Animals
         case MOUSE
         case TURTLE
         case ZEBRA
+        
+        var name: String {
+            return self.rawValue
+        }
     }
     
     var animal: Animal = .DOG
@@ -29,17 +33,17 @@ struct Animals
         var imageName: String
         switch random {
         case 0:
-            imageName = "DOG"
+            imageName = Animal.DOG.name
         case 1:
-            imageName = "HORSE"
+            imageName = Animal.HORSE.name
         case 2:
-            imageName = "MOUSE"
+            imageName = Animal.MOUSE.name
         case 3:
-            imageName = "TURTLE"
+            imageName = Animal.TURTLE.name
         case 4:
-            imageName = "ZEBRA"
+            imageName = Animal.ZEBRA.name
         default:
-            imageName = "DOG"
+            imageName = Animal.DOG.name
         }
         
         return Animals(animal: Animal(rawValue: imageName)!, animalImage: UIImage(named: imageName ))

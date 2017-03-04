@@ -21,6 +21,9 @@ class GameViewController: UIViewController {
     @IBOutlet weak var viewProposedLetters: UIView!
     @IBOutlet weak var viewPlayerLetters: UIView!
     
+    var viewEndGame: UILabel?
+
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         
@@ -39,11 +42,13 @@ class GameViewController: UIViewController {
         
         let alertsInseadOfViewsOnEndGame = true
         
+        sender.isEnabled = false
+        sender.backgroundColor = UIColor.gray
+
         if let text = sender.titleLabel?.text {
             print("Letter chosen: \(text)")
             
-            let result = game.tryLetter(inAnimal: text)
-            if result == -1
+            guard let result = game.tryLetter(inAnimal: text) else
             {
                 print("Letter not found")
                 
@@ -53,28 +58,25 @@ class GameViewController: UIViewController {
                     print("Game Over - FAILED")
                     showEndGameView(success: false, alerts: alertsInseadOfViewsOnEndGame)
                 }
+                
+                return
             }
-            else
+            
+            print("Letter found!")
+            
+            let letterButton = viewPlayerLetters.subviews[result]
+            
+            (letterButton as! UIButton).backgroundColor = .yellow
+            (letterButton as! UIButton).setTitle(text, for: .normal)
+            
+            
+            // check if game is completed - success
+            if game.gameOver == true
             {
-                print("Letter found!")
-                
-                let letterButton = viewPlayerLetters.subviews[result]
-                
-                (letterButton as! UIButton).backgroundColor = .yellow
-                (letterButton as! UIButton).setTitle(text, for: .normal)
-                
-
-                // check if game is completed - success
-                if game.gameOver == true
-                {
-                    print("Game Over - SUCESS")
-                    showEndGameView(success: true, alerts: alertsInseadOfViewsOnEndGame)
-                }
+                print("Game Over - SUCESS")
+                showEndGameView(success: true, alerts: alertsInseadOfViewsOnEndGame)
             }
         }
-        
-        sender.isEnabled = false
-        sender.backgroundColor = UIColor.gray
     }
     
     func showEndGameView(success: Bool, alerts: Bool)
@@ -154,7 +156,7 @@ class GameViewController: UIViewController {
     func restartLevel()
     {
         clearPlayerLetterViewButtons()
-        game.initialize(animal: randomAnimal.animal.rawValue)
+        game.initialize(animal: randomAnimal.animal.name)
         
         // begin new game
         for btn in viewProposedLetters.subviews
@@ -166,12 +168,13 @@ class GameViewController: UIViewController {
     
     func createEndView(success: Bool)
     {
-        let viewEndGame = UILabel(frame: CGRect(x: 0, y: 0, width: 200, height: 60))
+        viewEndGame = UILabel(frame: CGRect(x: 0, y: 0, width: 200, height: 60))
         
+        if let viewEndGame = viewEndGame {
+
         viewEndGame.textAlignment = .center
         viewEndGame.font = UIFont.boldSystemFont(ofSize: 36.0)
         viewEndGame.translatesAutoresizingMaskIntoConstraints = false
-        viewEndGame.tag = 999 // set tag value so we can remove it from superview
         
         if success == true
         {
@@ -222,8 +225,9 @@ class GameViewController: UIViewController {
             multiplier: 1,
             constant: -16)
         
-        animalView.addConstraints([centerX, centerY, leading, trailing])
-        
+            animalView.addConstraints([centerX, centerY, leading, trailing])
+        }
+    
         buttonNewGame.setTitle("NEW GAME", for: .normal)
     }
     
@@ -233,7 +237,7 @@ class GameViewController: UIViewController {
         
         imageView.image = randomAnimal.animalImage
         
-        let randomizedAnimal = String.randomizeAnimalString(randomizeString: randomAnimal.animal.rawValue)
+        let randomizedAnimal = String.randomizeAnimalString(randomizeString: randomAnimal.animal.name)
         print("Randomized animal string: \(randomizedAnimal)")
         
         // convert to array
@@ -249,12 +253,12 @@ class GameViewController: UIViewController {
         }
         
         // initialize game
-        game.initialize(animal: randomAnimal.animal.rawValue)
+        game.initialize(animal: randomAnimal.animal.name)
     }
     
     func clearPlayerLetterViewButtons()
     {
-        let length = randomAnimal.animal.rawValue.characters.count
+        let length = randomAnimal.animal.name.characters.count
         var counter = 0
         
         
@@ -318,21 +322,15 @@ class GameViewController: UIViewController {
         getRandomAnimalAndSetupImageView()
         clearPlayerLetterViewButtons()
         
-        removeEndGameMessageFromSuperView()
-        
+        if let viewEndGame = viewEndGame {
+            viewEndGame.removeFromSuperview()
+        }
+
         buttonNewGame.setTitle("RESTART LEVEL", for: .normal)
     }
     
     func removeEndGameMessageFromSuperView()
     {
-        let subViews = self.animalView.subviews
-        for subview in subViews
-        {
-            if subview.tag == 999
-            {
-                subview.removeFromSuperview()
-            }
-        }
     }
     
     func disableAllProposedLettersButtons()

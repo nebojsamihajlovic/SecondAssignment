@@ -33,7 +33,7 @@ class Game {
     }
     
     // methods
-    public func tryLetter(inAnimal: String) -> Int {
+    public func tryLetter(inAnimal: String) -> Int? {
         var pos = -1
         
         if let index = animalToGuess.characters.index(of: Character(inAnimal))
@@ -65,7 +65,7 @@ class Game {
                 gameOver = true
             }
             
-            return -1
+            return nil
         }
     }
 }
