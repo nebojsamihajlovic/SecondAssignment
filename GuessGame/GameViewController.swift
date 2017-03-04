@@ -9,11 +9,11 @@
 import UIKit
 
 class GameViewController: UIViewController {
-
+    
     // always has a value (at least default)
     var randomAnimal: Animals!
     var game = Game()
-
+    
     @IBOutlet weak var imageView: UIImageView!
     @IBOutlet weak var animalView: UIImageView!
     @IBOutlet weak var buttonNewGame: UIButton!
@@ -22,7 +22,7 @@ class GameViewController: UIViewController {
     @IBOutlet weak var viewPlayerLetters: UIView!
     
     var viewEndGame: UILabel?
-
+    
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -44,7 +44,7 @@ class GameViewController: UIViewController {
         
         sender.isEnabled = false
         sender.backgroundColor = UIColor.gray
-
+        
         if let text = sender.titleLabel?.text {
             print("Letter chosen: \(text)")
             
@@ -171,63 +171,63 @@ class GameViewController: UIViewController {
         viewEndGame = UILabel(frame: CGRect(x: 0, y: 0, width: 200, height: 60))
         
         if let viewEndGame = viewEndGame {
-
-        viewEndGame.textAlignment = .center
-        viewEndGame.font = UIFont.boldSystemFont(ofSize: 36.0)
-        viewEndGame.translatesAutoresizingMaskIntoConstraints = false
-        
-        if success == true
-        {
-            viewEndGame.backgroundColor = .green
-            viewEndGame.text = "CORRECT!"
-        }
-        else
-        {
-            viewEndGame.backgroundColor = .red
-            viewEndGame.text = "GAME OVER!"
-        }
-        
-        self.animalView.addSubview(viewEndGame)
-        
-        let centerX = NSLayoutConstraint(
-            item: viewEndGame,
-            attribute: .centerX,
-            relatedBy: .equal,
-            toItem: animalView,
-            attribute: .centerX,
-            multiplier: 1,
-            constant: 0)
-        
-        let centerY = NSLayoutConstraint(
-            item: viewEndGame,
-            attribute: .centerY,
-            relatedBy: .equal,
-            toItem: animalView,
-            attribute: .centerY,
-            multiplier: 1,
-            constant: 0)
-        
-        let leading = NSLayoutConstraint(
-            item: viewEndGame,
-            attribute: .leading,
-            relatedBy: .equal,
-            toItem: animalView,
-            attribute: .leading,
-            multiplier: 1,
-            constant: 16)
-        
-        let trailing = NSLayoutConstraint(
-            item: viewEndGame,
-            attribute: .trailing,
-            relatedBy: .equal,
-            toItem: animalView,
-            attribute: .trailing,
-            multiplier: 1,
-            constant: -16)
-        
+            
+            viewEndGame.textAlignment = .center
+            viewEndGame.font = UIFont.boldSystemFont(ofSize: 36.0)
+            viewEndGame.translatesAutoresizingMaskIntoConstraints = false
+            
+            if success == true
+            {
+                viewEndGame.backgroundColor = .green
+                viewEndGame.text = "CORRECT!"
+            }
+            else
+            {
+                viewEndGame.backgroundColor = .red
+                viewEndGame.text = "GAME OVER!"
+            }
+            
+            self.animalView.addSubview(viewEndGame)
+            
+            let centerX = NSLayoutConstraint(
+                item: viewEndGame,
+                attribute: .centerX,
+                relatedBy: .equal,
+                toItem: animalView,
+                attribute: .centerX,
+                multiplier: 1,
+                constant: 0)
+            
+            let centerY = NSLayoutConstraint(
+                item: viewEndGame,
+                attribute: .centerY,
+                relatedBy: .equal,
+                toItem: animalView,
+                attribute: .centerY,
+                multiplier: 1,
+                constant: 0)
+            
+            let leading = NSLayoutConstraint(
+                item: viewEndGame,
+                attribute: .leading,
+                relatedBy: .equal,
+                toItem: animalView,
+                attribute: .leading,
+                multiplier: 1,
+                constant: 16)
+            
+            let trailing = NSLayoutConstraint(
+                item: viewEndGame,
+                attribute: .trailing,
+                relatedBy: .equal,
+                toItem: animalView,
+                attribute: .trailing,
+                multiplier: 1,
+                constant: -16)
+            
             animalView.addConstraints([centerX, centerY, leading, trailing])
         }
-    
+        
         buttonNewGame.setTitle("NEW GAME", for: .normal)
     }
     
@@ -295,12 +295,12 @@ class GameViewController: UIViewController {
         if sender.title(for: .normal) == "RESTART LEVEL"
         {
             let alert = UIAlertController(title: "Restart Level", message: "Do you really want to restart level?", preferredStyle: .alert)
-
+            
             for i in ["Yes", "No"]
             {
                 alert.addAction(UIAlertAction(title: i, style: .default, handler: restartLevel))
             }
-        
+            
             self.present(alert, animated: true, completion: nil)
             
             return
@@ -312,11 +312,14 @@ class GameViewController: UIViewController {
     func startNewGame()
     {
         // begin new game
-        for btn in viewProposedLetters.subviews
+        for view in viewProposedLetters.subviews
         {
-            (btn as! UIButton).isEnabled = true
-            (btn as! UIButton).setTitle(" ", for: .normal)
-            (btn as! UIButton).backgroundColor = UIColor.blue
+            for btn in view.subviews
+            {
+                (btn as! UIButton).isEnabled = true
+                (btn as! UIButton).setTitle(" ", for: .normal)
+                (btn as! UIButton).backgroundColor = UIColor.blue
+            }
         }
         
         getRandomAnimalAndSetupImageView()
@@ -325,7 +328,7 @@ class GameViewController: UIViewController {
         if let viewEndGame = viewEndGame {
             viewEndGame.removeFromSuperview()
         }
-
+        
         buttonNewGame.setTitle("RESTART LEVEL", for: .normal)
     }
     
@@ -335,9 +338,12 @@ class GameViewController: UIViewController {
     
     func disableAllProposedLettersButtons()
     {
-        for btn in viewProposedLetters.subviews
+        for view in viewProposedLetters.subviews
         {
-            (btn as! UIButton).isEnabled = false
+            for btn in view.subviews
+            {
+                (btn as! UIButton).isEnabled = false
+            }
         }
     }
 }
